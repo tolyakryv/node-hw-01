@@ -4,7 +4,9 @@
   "description": "hw01",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/tolyakryv/node-hw-01/issues"
   },
-  "homepage": "https://github.com/tolyakryv/node-hw-01#readme"
+  "homepage": "https://github.com/tolyakryv/node-hw-01#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "commander": "^9.4.0",
+    "nanoid": "3.3.4"
+  }
 }

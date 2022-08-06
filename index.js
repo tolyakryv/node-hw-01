@@ -30,7 +30,7 @@ async function invokeAction({ action, contactId, name, email, phone }) {
 }
 program
   .option("-a, --action <type>", "choose action")
-  .option("-i, --id <type>", "user id")
+  .option("-i, --contactId <type>", "user id")
   .option("-n, --name <type>", "user name")
   .option("-e, --email <type>", "user email")
   .option("-p, --phone <type>", "user phone");
@@ -39,7 +39,8 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-// invokeAction(argv);
+invokeAction(argv);
 // invokeAction({ action: "get", contactId: "4" });
 // invokeAction({ action: "list" });
-invokeAction({ action: "add", name: "gans", email: "gans", phone: "gans" });
+// invokeAction({ action: "add", name: "gans", email: "gans", phone: "gans" });
+// invokeAction({ action: "remove", contactId: "4" });

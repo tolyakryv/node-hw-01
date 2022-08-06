@@ -9,12 +9,14 @@ async function listContacts() {
 }
 async function getContactById(contactId) {
   const data = await listContacts();
+  console.log(contactId);
   const result = data.find((e) => e.id == contactId);
   return result;
 }
 
 async function removeContact(contactId) {
   const data = await listContacts();
+  console.log(contactId);
   const index = data.findIndex((e) => e.id === contactId);
   if (index === -1) {
     return null;

@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-hw01",
+  "version": "1.0.0",
+  "description": "hw01",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tolyakryv/node-hw-01.git"
+  },
+  "author": "tolyakryv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tolyakryv/node-hw-01/issues"
+  },
+  "homepage": "https://github.com/tolyakryv/node-hw-01#readme"
+}

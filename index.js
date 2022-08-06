@@ -1,12 +1,11 @@
 const contacts = require("./contacts");
 const { program } = require("commander");
-// const program = new Command();
 
 async function invokeAction({ action, contactId, name, email, phone }) {
   switch (action) {
     case "list":
       const allContacts = await contacts.listContacts();
-      console.log(allContacts);
+      console.table(allContacts);
       break;
 
     case "get":
@@ -25,7 +24,7 @@ async function invokeAction({ action, contactId, name, email, phone }) {
       break;
 
     default:
-      console.warn("\x1B[31m Unknown action type!");
+      console.warn("Unknown action type!");
   }
 }
 program
@@ -40,7 +39,3 @@ program.parse(process.argv);
 const argv = program.opts();
 
 invokeAction(argv);
-// invokeAction({ action: "get", contactId: "4" });
-// invokeAction({ action: "list" });
-// invokeAction({ action: "add", name: "gans", email: "gans", phone: "gans" });
-// invokeAction({ action: "remove", contactId: "4" });

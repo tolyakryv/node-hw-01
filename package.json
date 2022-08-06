@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node index.js --action",
+    "dev": "nodemon index.js --action list",
+    "list": "node index.js --action "
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "commander": "^9.4.0",
-    "nanoid": "3.3.4"
+    "nanoid": "3.3.4",
+    "readline-sync": "^1.4.10"
   }
 }
